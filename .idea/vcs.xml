@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/New_file_homepage_1.1" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/New_file_homepage_1.1/New ADDED" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/New Files" vcs="Git" />
   </component>
 </project>
