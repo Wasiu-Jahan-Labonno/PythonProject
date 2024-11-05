@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bhara Hobe</title>
+     {% load static %}
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+	<link href="css/custom-css.css" rel="stylesheet">
+
+<style>
+	.home-image {
+    height: 600px !important;
+    width: 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 6px solid #fff;
+    position: relative;
+    opacity: 0.9;
+}
+
+.about{
+	position: absolute;
+	left: 70px;
+	top: 130px;
+	width: 650px;
+}
+
+.cat-img {
+    height: 200px !important;
+    width: 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+
+}
+
+.cat-img:hover{
+	transform: scale(1.1);
+}
+
+.brd-2{
+      margin-right: 20px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border: 2px solid #f1f2f3;
+}
+
+
+.bg-custom {
+    --bs-bg-opacity: 1;
+    background-color: rgb(214 220 227) !important;
+
+
+}
+
+.custom-btn{
+	padding: 8px 20px;
+	color: white;
+	background-color: #4ab1ef;
+      margin-right: 8px;
+      border-radius: 10px;
+}
+
+
+.nav-avatar {
+    height: 25px !important;
+    width: 25px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+
+}
+
+.logo-avatar {
+    height: 40px !important;
+    width: 40px !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+
+}
+
+.info-icon{
+    color: white;
+    padding: 9px 12px;
+    background-color: #cc3b2f;
+    border-radius: 50%;
+}
+
+.info-icon:hover{
+    background-color: #f41907;
+}
+
+#navbarNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffebf3;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-link:hover{
+  color: #c30909;
+}
+
+.right-item:hover{
+  color: #c30909;
+}
+
+.look-img {
+   	height: 320px !important;
+    width: 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    opacity: 0.9;
+
+}
+
+.appt-img {
+    height: 320px !important;
+    width: 100% !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    position: relative;
+    opacity: 0.9;
+
+}
+.appt-info{
+    position: absolute;
+    bottom: -25px;
+    left: 50px;
+    padding: 2px 30px;
+    background-color: #dadbd6;
+    border-radius: 6px;
+}
+
+.app-feature{
+    margin-right: 20px;
+    font-size: 16px;
+    color: #222;
+}
+
+
+.look-img:hover{
+  transform: scale(1.1);
+}
+
+.service-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
+.service-box:hover {
+  background-color: #cc3b2f;
+  color:#fff;
+}
+
+.icon {
+  font-size: 48px;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+
+.services-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services-title h2 {
+  color: #000000;
+  font-size: 33px;
+  margin-bottom: 10px;
+}
+
+.services-title hr {
+  border: 2px solid #ff0101;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.about-section {
+    align-items: center;
+    padding: 50px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    height: 480px;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h4 {
+    font-size: 1em;
+    color: #7DBF45;
+    margin-bottom: 10px;
+}
+
+.about-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.highlight {
+    color: #7DBF45;
+}
+
+.about-content p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    font-size: 1em;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.feature-item::before {
+    content: "➔";
+    color: #7DBF45;
+    margin-right: 8px;
+}
+
+.read-more {
+    background-color: #7DBF45;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.read-more:hover {
+    background-color: #66a938;
+}
+
+.cat_link {
+    color: #222;
+    text-decoration: none;
+}
+
+.cat_link:hover {
+    color: #66a938;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    gap: 15px; /* Adjust as needed for spacing */
+}
+footer h5 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  color: #777;
+}
+
+.home-content {
+  padding-top: 190px;
+  color:rgb(255, 255, 255);
+  width: 50%;
+  padding-left:50px;
+}
+
+.content-wrapper{
+  margin-bottom: 130px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4em 0.6em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.badge-secondary {
+  color: #ffffff;
+  background-color: #6c757d;
+}
+
+a.badge-secondary:hover, a.badge-secondary:focus {
+  color: #ffffff;
+  background-color: #545b62;
+}
+
+a.badge-secondary:focus, a.badge-secondary.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+}
+.mr-3,
+.mx-3 {
+  margin-right: 1rem !important;
+}
+
+.appt-img:hover{
+  transform: scale(1.1);
+}
+
+.appt-img{
+  height:200px;
+}
+</style>
+
+
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg bg-custom p-3">
+	    <div class="container-fluid">
+	      <!-- Navbar brand -->
+
+
+	      <!-- Toggler for responsive navbar -->
+	      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+
+	      <!-- Navbar content -->
+	      <div class="collapse navbar-collapse" id="navbarNav">
+
+
+
+
+	        <div class="d-flex justify-content-between">
+	        	<div style="padding-left:20px;">
+	        		<ul class="navbar-nav">
+			          <!-- Right side menu items (3 items) -->
+			          <li class="nav-item">
+			            <a class="nav-link" href="index.html">Home</a>
+			          </li>
+			          <li class="nav-item">
+			            <a class="nav-link" href="looking_for.html">Looking for</a>
+			          </li>
+			          <li class="nav-item">
+			            <a class="nav-link" href="about.html">About</a>
+			          </li>
+			          <li class="nav-item">
+			            <a class="nav-link" href="#">Blog</a>
+			          </li>
+			          <li class="nav-item">
+			            <a class="nav-link" href="#">
+			            	<img class="nav-avatar" src="https://media.istockphoto.com/id/1451587807/vector/user-profile-icon-vector-avatar-or-person-icon-profile-picture-portrait-symbol-vector.jpg?s=612x612&w=0&k=20&c=yDJ4ITX1cHMh25Lt1vI1zBn2cAKKAlByHBvPJ8gEiIg=">
+			            </a>
+			          </li>
+	        		</ul>
+	        	</div>
+
+	        	<div style="padding-left: 1100px;">
+	        		<ul class="navbar-nav">
+			          <!-- Right side menu items (3 items) -->
+			          <li class="nav-item">
+			            <a class="nav-link mr-3" href="index.html">Sign In</a>
+			          </li>
+			          <li class="nav-item">
+			            <a class="nav-link " href="looking_for.html">Sign Up</a>
+			          </li>
+
+			          <li class="nav-item">
+			            <a class="nav-link" href="#">
+			            	<img class="logo-avatar" src="static/index/logo.png">
+			            </a>
+			          </li>
+			        </ul>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+	</nav>
+{% block context %}
+{%endblock%}
+
+
+	<footer style="background-color: #fff9f9;  padding: 20px 0; border-top: 1px solid #e0dddd;">
+	  <div class="container">
+	    <div class="row">
+	      <!-- About Section -->
+	      <div class="col-md-4">
+	        <h5>About Us</h5>
+	        <p>We offer a variety of rental properties to fit all needs and budgets. Whether you’re looking for a cozy apartment or a spacious house, we have the perfect place for you to call home.</p>
+	      </div>
+
+	      <!-- Navigation Links -->
+	      <div class="col-md-2">
+	        <h5>Quick Links</h5>
+	        <ul class="list-unstyled">
+	          <li><a href="about.html">About Us</a></li>
+	          <li><a href="looking_for.html">Product</a></li>
+	          <li><a href="#">FAQ</a></li>
+	          <li><a href="#">Contact Us</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Policies -->
+	      <div class="col-md-2">
+	        <h5>Policies</h5>
+	        <ul class="list-unstyled">
+	          <li><a href="#">Terms & Conditions</a></li>
+	          <li><a href="#">Privacy Policy</a></li>
+	          <li><a href="#">Refund Policy</a></li>
+	        </ul>
+	      </div>
+
+	      <!-- Contact & Social Media -->
+	      <div class="col-md-4">
+	        <h5>Contact Us</h5>
+	        <p><strong>Email:</strong> labonnoAbidMukit@gmail.com</p>
+	        <p><strong>Phone:</strong> 01705041702</p>
+	        <div>
+	          <a href="https://www.facebook.com/mukit.hasan.7927?mibextid=ZbWKwL" target="_blank">Facebook</a> |
+	          <a href="https://x.com/mukithasan375" target="_blank">Twitter</a> |
+	          <a href="http://www.instagram.com/abix404 target="_blank">Instagram</a>
+	        </div>
+	      </div>
+	    </div>
+
+	    <!-- Bottom Footer -->
+	    <div class="row mt-4">
+	      <div class="col text-center">
+	        <p>Copyright &copy; 2024 MukitLabonnoAbid Company. All Rights Reserved.</p>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
